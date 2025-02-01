@@ -1,12 +1,15 @@
 import React from 'react'
+import Navbar from './components/Navbar'
+import Home from './components/Home'
+import '../src/App.css'
+import Services from './components/Services'
 
 const App = () => {
     return (
         <>
-            <h1 className='font-bold underline'>Shehroz hassan</h1>
-            <h2>saddam hassan</h2>
-            <h3>Ikram hassan</h3>
-            <h4>hammad hassan</h4>
+            <Navbar />
+            <Home />
+            <Services />
         </>
     )
 }

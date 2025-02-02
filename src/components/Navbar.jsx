@@ -3,7 +3,6 @@ import { Link } from "react-scroll"; // Import Link from react-scroll
 import Logo from "../assets/logo.png";
 import { FaXmark, FaBars } from "react-icons/fa6";
 
-
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
@@ -35,7 +34,12 @@ const Navbar = () => {
     return (
         <>
             <header className="w-full bg-white md:bg-transparent fixed top-0 left-0 right-0">
-                <nav className={`py-4 lg:px-14 px-4 ${isSticky ? 'sticky top-0 left-0 right-0 border-b bg-white duration-300' : ''}`}>
+                <nav
+                    className={`py-4 lg:px-14 px-4 ${isSticky
+                        ? "sticky top-0 left-0 right-0 border-b bg-white duration-300"
+                        : ""
+                        }`}
+                >
                     <div className="flex justify-between items-center text-base gap-8">
                         <a
                             href=""
@@ -58,7 +62,7 @@ const Navbar = () => {
                                     smooth={true}
                                     offset={-100}
                                     key={path}
-                                    className="text-base text-gray-900 hover:text-brandPrimary cursor-pointer first:font-medium"
+                                    className="text-base text-gray-900 cursor-pointer hover:text-brandPrimary cursor-pointer first:font-medium"
                                 >
                                     {link}
                                 </Link>
@@ -78,16 +82,24 @@ const Navbar = () => {
                         </div>
                         {/* menu btn for only small devices */}
                         <div className="md:hidden">
-                            <button onClick={toggleMenu} className="text-neutralDGrey focus:outline-none focus:text-gray-500">
-                                {
-                                    isMenuOpen ? (<FaXmark className="h-6 w-6" />) : (<FaBars className="h-6 w-6 " />)
-                                }
+                            <button
+                                onClick={toggleMenu}
+                                className="text-neutralDGrey focus:outline-none focus:text-gray-500"
+                            >
+                                {isMenuOpen ? (
+                                    <FaXmark className="h-6 w-6" />
+                                ) : (
+                                    <FaBars className="h-6 w-6 " />
+                                )}
                             </button>
                         </div>
                     </div>
 
                     {/* nav items for mobile devices */}
-                    <div className={`space-y-4 px-4 mt-16 py-7 bg-brandPrimary ${isMenuOpen ? 'flex flex-col fixed top-0 left-0 right-0' : 'hidden'}`}>
+                    <div
+                        className={`space-y-4 px-4 mt-16 py-7 bg-brandPrimary ${isMenuOpen ? "flex flex-col fixed top-0 left-0 right-0" : "hidden"
+                            }`}
+                    >
                         {navItems.map(({ link, path }) => (
                             <Link
                                 to={path}

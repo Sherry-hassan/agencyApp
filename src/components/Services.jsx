@@ -5,9 +5,6 @@ import icon3 from '../assets/icon3.png'
 import icon4 from '../assets/icon4.png'
 import icon5 from '../assets/icon5.png'
 import icon6 from '../assets/icon6.png'
-import membership from '../assets/membership.png'
-import national from '../assets/national.png'
-import clubs from '../assets/clubs.png'
 
 
 
@@ -25,7 +22,7 @@ const Services = () => {
     ]
     return (
         <>
-            <div className='md:px-14 px-4 py-16 max-w-screen-2xl mx-auto'>
+            <div className='md:px-14 px-4 py-16 max-w-screen-2xl mx-auto' id='service'>
                 <div className='text-center my-8'>
                     <h2 className='text-4xl text-neutralDGrey font-semibold mb-2'>Our Clients</h2>
                     <p className='text-neutralGrey'>We have been working with some Fortune 500+ clients</p>
